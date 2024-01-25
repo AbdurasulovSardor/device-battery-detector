@@ -8,7 +8,7 @@ async function initBattery() {
   let batt = await navigator.getBattery()
   let updateBattery = () => {
     let level = Math.floor(batt.level * 100)
-    Bpercentage.innerHTML = level + "%"
+    Bpercentage.textContent = `${level}%`
     batteryLiquid.style.height = `${level}%`
     if (level == 100) {
       batteryStatus.innerHTML = `Battery Full <i class="ri-battery-2-fill green-color"></i>`
